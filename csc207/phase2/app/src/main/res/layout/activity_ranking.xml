@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.RankingActivity">
+
+    <ScrollView
+        android:id="@+id/top_scores"
+        android:layout_width="311dp"
+        android:layout_height="374dp"
+        android:layout_marginTop="70dp"
+        android:background="#FCF2AE"
+        app:layout_constraintBottom_toTopOf="@+id/scoreboard_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00FDFCFC">
+
+            <TableRow
+                android:id="@+id/scoreboard_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/score1_icon"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/choose_icon"
+                    tools:srcCompat="@tools:sample/avatars[0]" />
+
+                <TextView
+                    android:id="@+id/score1_name"
+                    android:layout_width="110dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:text="@string/no_data" />
+
+                <TextView
+                    android:id="@+id/score1_score"
+                    android:layout_width="110dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:text="@string/no_data" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/scoreboard_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/score2_icon"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/choose_icon"
+                    tools:srcCompat="@tools:sample/avatars[1]" />
+
+                <TextView
+                    android:id="@+id/score2_name"
+                    android:layout_width="110dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/score2_score"
+                    android:layout_width="110dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/scoreboard_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/score3_icon"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/choose_icon"
+                    tools:srcCompat="@tools:sample/avatars[0]" />
+
+                <TextView
+                    android:id="@+id/score3_name"
+                    android:layout_width="110dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/score3_score"
+                    android:layout_width="110dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/scoreboard_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/score4_icon"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/choose_icon"
+                    tools:srcCompat="@tools:sample/avatars[0]" />
+
+                <TextView
+                    android:id="@+id/score4_name"
+                    android:layout_width="110dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1" />
+
+
+                <TextView
+                    android:id="@+id/score4_score"
+                    android:layout_width="110dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/scoreboard_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/score5_icon"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/choose_icon"
+                    tools:srcCompat="@tools:sample/avatars[0]" />
+
+                <TextView
+                    android:id="@+id/score5_name"
+                    android:layout_width="110dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1" />
+
+
+                <TextView
+                    android:id="@+id/score5_score"
+                    android:layout_width="110dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/scoreboard_6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/score6_icon"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/choose_icon"
+                    tools:srcCompat="@tools:sample/avatars[0]" />
+
+                <TextView
+                    android:id="@+id/score6_name"
+                    android:layout_width="110dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/score6_score"
+                    android:layout_width="110dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/scoreboard_7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/score7_icon"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/choose_icon"
+                    tools:srcCompat="@tools:sample/avatars[0]" />
+
+                <TextView
+                    android:id="@+id/score7_name"
+                    android:layout_width="110dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1" />
+
+
+                <TextView
+                    android:id="@+id/score7_score"
+                    android:layout_width="110dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/scoreboard_8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/score8_icon"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/choose_icon"
+                    tools:srcCompat="@tools:sample/avatars[0]" />
+
+                <TextView
+                    android:id="@+id/score8_name"
+                    android:layout_width="110dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1" />
+
+
+                <TextView
+                    android:id="@+id/score8_score"
+                    android:layout_width="110dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/scoreboard_9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/score9_icon"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/choose_icon"
+                    tools:srcCompat="@tools:sample/avatars[0]" />
+
+                <TextView
+                    android:id="@+id/score9_name"
+                    android:layout_width="110dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1" />
+
+
+                <TextView
+                    android:id="@+id/score9_score"
+                    android:layout_width="110dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/scoreboard_10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/score10_icon"
+                    android:layout_width="80dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/choose_icon"
+                    tools:srcCompat="@tools:sample/avatars[0]" />
+
+                <TextView
+                    android:id="@+id/score10_name"
+                    android:layout_width="110dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1" />
+
+
+                <TextView
+                    android:id="@+id/score10_score"
+                    android:layout_width="110dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1" />
+
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/scoreboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/score_board"
+        android:textAppearance="@style/GreenText"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:fontFamily="serif"
+        app:layout_constraintBottom_toTopOf="@+id/score_ball"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:textSize="30sp" />
+
+    <Button
+        android:id="@+id/score_hangman"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:text="@string/game_hangman"
+        app:layout_constraintBottom_toTopOf="@+id/top_scores"
+        app:layout_constraintEnd_toStartOf="@+id/score_ball"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.889" />
+
+    <Button
+        android:id="@+id/score_ball"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:text="@string/game_jumpingball"
+        app:layout_constraintBottom_toTopOf="@+id/top_scores"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.88" />
+
+    <Button
+        android:id="@+id/score_tiles"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:text="@string/Tiles"
+        app:layout_constraintBottom_toTopOf="@+id/top_scores"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/score_ball"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.88" />
+
+    <ImageView
+        android:id="@+id/score_usericon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/choose_icon"
+        app:layout_constraintBottom_toTopOf="@+id/scoreboard_back"
+        app:layout_constraintEnd_toStartOf="@+id/score_username"
+        app:layout_constraintHorizontal_bias="0.97"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_scores"
+        tools:srcCompat="@tools:sample/avatars[0]" />
+
+    <TextView
+        android:id="@+id/score_username"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/show_username"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_scores"
+        app:layout_constraintVertical_bias="0.04000002" />
+
+    <TextView
+        android:id="@+id/score_userscore"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/score"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toEndOf="@+id/score_username"
+        app:layout_constraintTop_toBottomOf="@+id/top_scores"
+        app:layout_constraintVertical_bias="0.04000002" />
+
+    <Button
+        android:id="@+id/scoreboard_back"
+        android:layout_width="76dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:text="@string/go_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.994" />
+</androidx.constraintlayout.widget.ConstraintLayout>

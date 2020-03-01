@@ -1,0 +1,15 @@
+The project should work once you open it.
+An uml diagram in pdf form is attached.
+
+Hangman:
+The words need to be guessed are mostly fruits. Guess one letter each time.
+
+Don't Touch White Tiles:
+Just don't touch the white tiles and tap on every black ones!
+
+Jumping Ball:
+Move the bat to keep the ball bouncing, game over if the ball falls off the screen or a red ball is caught.
+Catching yellow balls will increase score and speed of the ball.
+Gold will be earned every third yellow ball is caught.
+
+

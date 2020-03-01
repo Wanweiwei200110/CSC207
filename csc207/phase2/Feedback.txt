@@ -1,0 +1,44 @@
+Dear group_0581
+
+This semester, we talked about MVP, the Model-View-Presenter architecture. It has many advantages, particularly when working with Android. As you can see from your project, your activity classes have methods that are specific to Android. If you encapsulate the rest of your code sufficiently, it is possible to port it to another platform simply by creating a new UI (for example, a website).
+
+Encapsulation can take on many forms. You can package your View classes together. You can ensure that your dependencies go one-way, towards the inner more abstract layers. You can incorporate SOLID principles as much as possible and design patterns where they make sense.
+Here is feedback that is specific to your project:
+
+You made good use of…
++ The I principle in SOLID is met with great use of interfaces
++ User password requirements is easily extendable
++ Great job using the MVP design
++ Great job making the stats common among the 3 games
++ Great job making use of the different design patterns, I saw the following design patterns being used throughout the application, and they were pretty clean implementations of that.
+  - Builder
+  - Factory
+  - Dependency Injection
+  - Singleton
+  - MVP & MVC
++ The verification implementation for the password was well done, and was loosely coupled, allowing anyone to change the password strength requirements as they see fit.
++ The resurrection key was also very easy to modify on a per-game basis, and was well designed so that each game could override the functionality of the resurrection key.
+
+The user sees…
++ Login page with a ‘remember me’ option
++ Colors can be modified
++ 3 games with some of them containing levels within them
++ Lives, gold and score all being tracked
++ Autosave feature
+
+A good next step would be to…
++ Improve the Hangman game through allowing lives to be used for more attempts
++ Upon submitting final version make sure naming convention and indentation/spaces are in the correct format
++ There was also a mix of the snake case style as well as the camel case convention. (gold_increment)
++ The ‘this’ keyword was used in some areas but not all, I would have preferred to see it used everywhere or not at all. 
++ Indentation is also inconsistent, which probably means that they didn’t use any auto-formatting rules before their final push/demo. Please stick to one format and style, normally a linter would help pick this up on pushes but I would encourage you to look into the settings within Android Studio.
++ Change the hangman game from using hardcoded strings to reading from a file. While I understand that you tried to implement this but failed, I think given more time and thought you definitely could've pulled it off.
++ While the I principle in SOLID is met for the most part it can still be improved. For example in the accountmanagerinterface package there are two interfaces which both service ‘goToSettingsActivity’. This service can have its own interface.
++ Class RankingActivity has 10 variables with names iconActivity?. This situation can be avoided by using a data structure.
++ You might move your game activity package into the activities package. It would be easier to find for someone unfamiliar with your program.
+
+We hope that you enjoyed working on this project and found it a useful learning experience.
+
+Cheers,
+The CSC207 Instructional Team
+

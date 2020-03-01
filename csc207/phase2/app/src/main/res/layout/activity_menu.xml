@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MenuActivity">
+
+    <View
+        android:id="@+id/menu_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/menu_hangman"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:text="@string/game_hangman"
+        app:layout_constraintBottom_toTopOf="@+id/menu_jumpingball"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/menu_store"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:text="@string/store"
+        app:layout_constraintBottom_toTopOf="@+id/menu_setting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu_rank" />
+
+    <Button
+        android:id="@+id/menu_rank"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:text="@string/playerRanking"
+        app:layout_constraintBottom_toTopOf="@+id/menu_store"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu_tiles" />
+
+    <Button
+        android:id="@+id/menu_logout"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/logout_of_game"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/menu_setting"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
+        android:text="@string/game_setting"
+        app:layout_constraintBottom_toTopOf="@+id/menu_logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu_store" />
+
+    <Button
+        android:id="@+id/menu_tiles"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:text="@string/don_t_tap_white_tiles"
+        app:layout_constraintBottom_toTopOf="@+id/menu_rank"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu_jumpingball" />
+
+    <Button
+        android:id="@+id/menu_jumpingball"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:text="@string/game_jumpingball"
+        app:layout_constraintBottom_toTopOf="@+id/menu_tiles"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu_hangman" />
+
+    <ImageView
+        android:id="@+id/my_icon"
+        android:layout_width="102dp"
+        android:layout_height="92dp"
+        android:contentDescription="@string/menu_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.911"
+        app:layout_constraintStart_toEndOf="@+id/menu_logout"
+        app:layout_constraintTop_toBottomOf="@+id/menu_setting"
+        app:layout_constraintVertical_bias="0.428"
+        app:srcCompat="@drawable/icontest1"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/gold_menu"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/gold"
+        app:layout_constraintBottom_toTopOf="@+id/menu_hangman"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/magicalitem_menu"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:layout_marginBottom="80dp"
+        android:text="@string/ResurrectionKey"
+        app:layout_constraintBottom_toBottomOf="@+id/menu_hangman"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gold_menu"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

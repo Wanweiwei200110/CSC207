@@ -1,0 +1,137 @@
+#########
+# Step 1
+Code affected: none
+Created this file.
+#########
+# Step 2
+Code affected: all .java files
+Reformatted using the Google Java style formatter.
+#########
+# Step 3
+Code affected: Fish.turnAround
+Flaw: unnecessary if, leading to duplicate code.
+Fix: replaced if statement with a single assignment statement.
+#########
+# Step 4
+Code affected: Bubble, Seaweed, FishTankManager, Fish, HungryFish
+Flaw: some badly named instances, bad position of declaring instances.
+Fix: name changed: d -> decision, l -> length, myLittleFishes -> FishTankItems(changed again later, f should not be capitalized)
+Moved declaration of my_curr_row, my_curr_col to the front.
+# Step 5
+Code affected: HungryFish, FishTankManager, Bubble
+Flaw: duplicate code in HungryFish, random variable decision in Bubble. Public instance variables.
+Fix: added inheritance relationship between Fish and HungryFish.
+Wrote a method creating random double in Bubble class.
+Fixed typos.
+Changed all public instance variables into private, wrote getter and setter for private instance variables.
+# Step 6
+Code affected: Bubble, Seaweed, FishTankManager, Fish, HungryFish
+Flaw: duplicate code and structure.
+Fix: added a new abstract class FishTankItem that is the parent of Bubble, Fish and Seaweed.
+# Step 7
+Code affected: Bubble, Seaweed, FishTankManager, Fish, HungryFish, FishTankItem
+Flaw: nested if statements and many castings when calling move() method. Badly named instance variable.
+Methods have public access modifier. Inefficient 2D array.
+Fix: added abstract method move() to FishTankItem to use polymorphism.
+Name changed: FishTankItems -> fishTankItems
+Changed methods modifiers into default(package private).
+Changed array fishTankItems into ArrayList.
+# Step 8
+Code affected: Bubble, Seaweed, FishTankManager, Fish, HungryFish
+Flaw: static fishTankItems.
+Fix: make fishTankItems not static, changed subclasses' constructor, let them store a manager instance.
+Changed Fish.blowBubble() to that all items in the same tank share the same manager.
+# Step 9
+Code affected: Bubble, FishTankManager
+Flaw: complicated move() for bubbles.
+Fix: deleted instance variable decision, made it local for move() function.
+Deleted floatStraightUp(), floatRightUp(), floatLeftUp(), move the functionality into move() method and simplified.
+# Step 10
+Code affected: Fish, HungryFish
+Flaw: bug created by myself: problem displaying hungry fish due to undefined paintText color.
+Fix: optimized constructor in both classes.
+# Step 11
+Code affected: Fish
+Flaw: use "+=" for String concatenation takes extra memory space in reverseAppearance().
+Fix: used mutable StringBuilder instead.
+# Step 12
+Code affected: Seaweed
+Flaw: missing seaweed segment and wired if conditions in draw().
+Fix: simplified the condition and added the missing segment.
+# Step 13
+Code affected: Bubble, Seaweed, FishTankManager, Fish, HungryFish
+Flaw: unclear comments.
+Fix: gave more clear and concise comments.
+Add @Override before methods that overrides the parent functions.
+#########
+# Step 14 (N-1)
+Code affected: Fish, HungryFish
+Flaw: fish don't turn around when hit the wall.
+Fix: changed the logic in move() in Fish and HungryFish let the fish turn around when they hit the wall.
+Tested some number to adjust the conditions that trigger the turnAround() method.
+Fish and HungryFish have different numbers to adjust the condition so the move() method is implemented in both classes.
+# Step 15
+Code affected: Fish, HungryFish
+Flaw: duplicate code in both classes. Number for adjustment is a bit off.
+Fix: created helper moveControl() in Fish so that HungryFish can inherit the duplicate part. Updated the number for better display effect.
+# Step 16
+Code affected: Bubble
+Flaw: bubbles flow out of bounds still exist in memory.
+Fix: updated Bubble.move(), delete the bubble that is out of bound.
+# Step 17
+Code affected: Bubble, FishTankItem, Fish, HungryFish, Seaweed
+Flaw: out of bounds bubbles are deleted form FishTankManager but still have the manager as their instance variables.
+Fix: updated Bubble.move(), set the manager to null.
+method name changed: assignManager -> setManager
+#########
+# Step 18 (N)
+Code affected: Fish, Bubble, HungryFish, Seaweed
+Change: added moveHorizontally() and moveVertically() to make easier move() method.
+New classes added: TimidTadpole and SingingSquid.
+Tadpoles are very timid that die when the squid nearby is singing.
+When they die, they move downwards until they touch the floor, then they are deleted from the manager to save memory.
+Squids like to sing when tadpoles are nearby.
+When they sing, they go up until reach the surface of water, then they stop singing and quickly goes down a bit.
+# Step 19
+Code affected: TimidTadpole, SingingSquid, Fish, HungryFish
+Change: added method regularMove() that stores the common movements shared by all fish to reduce duplicate code.
+# Step 20
+Code affected: TimidTadpole, SingingSquid, Fish, Bubble
+Change: updated logic controlling when tadpoles die and when squids sing.
+Changed color of tadpoles and squids.
+Fixed some typos and unclear parts in notes.
+Changed type declaration of fishTankItems form Arraylist to List.
+# Step 21 (N+1)
+Code affected: TimidTadpole, SingingSquid, Fish, Bubble, HungryFish, Seaweed
+Change: numbered steps in notes to increase readability.
+changed x, y coordinate in drawString() in Fish
+Code smells fixed in previous steps(see details from steps above):
+    step4: bad position of instance variable declaration, bad name
+    step5: public instance variables
+    step7: public methods, many castings
+    step11: "+=" for String concatenation
+    step12: wired if condition in Seaweed.draw()
+added comments and javadoc to every instance variable and method.
+# Step 22
+Code affected: TimidTadpole, SingingSquid, Fish, Bubble, HungryFish, Seaweed
+Change: changed coordinate order in drawString() in Bubble and Seaweed.
+added javadoc for methods.
+Fixed code smell: unused color instance in Seaweed removed, unused import removed
+# Step 23
+Code affected: Seaweed
+Fixed code smell: removed unnecessary manager instance variable since it can set manager to the super class level.
+changed access modifier of instance variables to private.
+changed access modifier of instance variables to private.
+#Step 24
+Code affected: TimidTadpole, SingingSquid, Fish
+Change: added comments to javadoc that was missed before.
+Added @Override before the methods that override parent method.
+# Step 25
+Code affected: TimidTadpole, SingingSquid, Fish, Bubble, HungryFish, Seaweed
+Fixed code smell: some lines are too long, made them short by let them continue on the next line.
+# Step 26
+Code affected: Fish, FishTankItem
+Change: added comments to javadoc that was missed before.
+# Step 27
+Code affected: FishTankManager, SingingSquid
+Change: found some errors of comments in javadoc, now fixed.
