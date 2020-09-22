@@ -11,5 +11,3 @@ Jumping Ball:
 Move the bat to keep the ball bouncing, game over if the ball falls off the screen or a red ball is caught.
 Catching yellow balls will increase score and speed of the ball.
 Gold will be earned every third yellow ball is caught.
-
-
